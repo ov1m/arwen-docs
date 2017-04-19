@@ -1,8 +1,4 @@
 {
-  "env": {
-    "browser": true,
-    "node": true
-  },
   "extends": "airbnb",
   "plugins": [
     "react",
@@ -10,7 +6,8 @@
     "import"
   ],
   "rules": {
-    "comma-dangle": ["error", "never"],
-    "quotes": ["error", "single"]
+    "indent": [2, "tab"],
+    "react/jsx-indent": [2, "tab"],
+    "no-tabs": 0
   }
 }

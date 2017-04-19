@@ -16,7 +16,7 @@ const config = (env = {}) => ({
     path: path.resolve(__dirname, 'dist')
     // publicPath: '/dist/'
   },
-  devtool: env.prod ? 'source-maps' : 'eval',
+  devtool: 'source-maps',
   module: {
     rules: [
       {
@@ -86,7 +86,7 @@ const config = (env = {}) => ({
     errorDetails: true
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json', '.css']
+    extensions: ['.js', '.jsx', '.json', '.css']
   }
 });
 

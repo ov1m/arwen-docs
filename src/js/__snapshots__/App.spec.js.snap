@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <nav
+    className=""
+  >
+    <li>
+      <a
+        href="#asdas"
+      >
+        Getting Started
+      </a>
+    </li>
+  </nav>
+  12xzcasdas
+</div>
+`;

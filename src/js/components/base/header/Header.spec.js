@@ -1,12 +1,11 @@
-/*
- */
+/* eslint-disable */
 
 import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
-import App from './App';
+import Header from './Header';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<App />).toJSON();
-  expect(tree).toMatchSnapshot();
+	const tree = renderer.create(<Header />).toJSON();
+	expect(tree).toMatchSnapshot();
 });
