@@ -19,6 +19,7 @@ const config = (env = {}) => ({
   devtool: 'source-maps',
   module: {
     rules: [
+      /*
       {
         enforce: 'pre',
         test: /\.(js|jsx)$/,
@@ -27,6 +28,7 @@ const config = (env = {}) => ({
         ],
         use: 'eslint-loader'
       },
+      */
       {
         test: /\.(js|jsx)$/,
         include: [
@@ -35,7 +37,7 @@ const config = (env = {}) => ({
         use: 'babel-loader'
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.(scss|css)$/,
         include: [
           path.resolve(__dirname, 'src')
         ],
@@ -63,13 +65,15 @@ const config = (env = {}) => ({
     ]
   },
   plugins: [
+    /*
     new CompressionPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
       test: /\.(js|html)$/,
       minRatio: 0.8
     }),
-    new ExtractTextPlugin('[name].[chunkhash].css'),
+    */
+    new ExtractTextPlugin('base.css'),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
@@ -86,7 +90,7 @@ const config = (env = {}) => ({
     errorDetails: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.css']
+    extensions: ['.js', '.jsx', '.json', '.css', '.scss']
   }
 });
 

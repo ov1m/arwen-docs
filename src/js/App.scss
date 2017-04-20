@@ -1,0 +1,17 @@
+@import '../style/variables.scss';
+@import '../style/reset.scss';
+@import '../style/base.scss';
+
+#app {
+  display: flex;
+  min-height: 100%;
+}
+
+.wrapper {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.075);
+}
+
+.content {
+  padding: 0 4rem;
+}

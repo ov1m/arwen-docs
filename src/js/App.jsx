@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/base/header';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import ROUTES from './routes';
 
 class App extends Component {
 	constructor() {
@@ -10,12 +12,30 @@ class App extends Component {
 		}
 	}
 
+	renderContent() {
+	  const renderPageContent = ROUTES.map(({ path, component }) => (
+      <Route
+        component={component}
+        key={path}
+        path={path}
+      />
+    ));
+
+	  return (
+	    <div className="content">
+        {renderPageContent}
+      </div>
+    )
+  }
+
 	render() {
 		return (
-			<div>
-				<Header />
-				12xzcasdas
-			</div>
+      <Router>
+        <div className="wrapper">
+          <Header />
+          {this.renderContent()}
+        </div>
+      </Router>
 		);
 	}
 }
